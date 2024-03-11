@@ -1,10 +1,4 @@
-import {
-  createContext,
-  ReactNode,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import { createContext, ReactNode, useEffect, useState } from 'react';
 
 interface CountdownContextData {
   minutes: number;
@@ -35,12 +29,12 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
     setIsActive(true);
   }
 
-  function resetCountdown() {
+  const resetCountdown = function () {
     clearTimeout(countdownTimeout);
     setIsActive(false);
     setHasFinished(false);
     setTime(25 * 60);
-  }
+  };
 
   useEffect(() => {
     if (isActive && time > 0) {
