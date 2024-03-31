@@ -15,7 +15,7 @@ export default function Home(props: HomeProps) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Inicio | move.it</title>
+        <title>Inicio | concentrate</title>
       </Head>
       <CountdownProvider>
         <section>
