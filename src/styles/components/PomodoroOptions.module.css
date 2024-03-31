@@ -1,0 +1,21 @@
+.pomodoroList {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-bottom: 60px;
+  padding: 0 20px;
+}
+
+.pomodoroList li {
+  cursor: pointer;
+  background: #fff;
+  padding: 5px 20px;
+  border-radius: 4px;
+  transition: 0.4s;
+}
+
+.pomodoroList li:hover {
+  background: var(--blue);
+  color: var(--white);
+  transition: 0.4s;
+}

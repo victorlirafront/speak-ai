@@ -3,6 +3,7 @@ import { GetServerSideProps } from 'next';
 import styles from '../styles/pages/Home.module.css';
 import { Countdown } from '../components/Countdown';
 import { CountdownProvider } from '../contexts/CountdownContext';
+import PomodoroOptions from '../components/PomodoroOptions';
 
 interface HomeProps {
   level: number;
@@ -18,6 +19,7 @@ export default function Home(props: HomeProps) {
       </Head>
       <CountdownProvider>
         <section>
+          <PomodoroOptions />
           <div>
             <Countdown />
           </div>
