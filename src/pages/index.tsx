@@ -4,6 +4,7 @@ import styles from '../styles/pages/Home.module.css';
 import { Countdown } from '../components/Countdown';
 import { CountdownProvider } from '../contexts/CountdownContext';
 import PomodoroOptions from '../components/PomodoroOptions';
+import Header from '../components/Header';
 
 interface HomeProps {
   level: number;
@@ -15,9 +16,10 @@ export default function Home(props: HomeProps) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Inicio | concentrate</title>
+        <title>Start | concentrate</title>
       </Head>
       <CountdownProvider>
+        <Header />
         <section>
           <PomodoroOptions />
           <div>
