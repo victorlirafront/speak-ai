@@ -8,6 +8,10 @@ function Header() {
         <Image width={30} height={30} src="/check-new.png" alt="check-icon" />
         <h1>Concentrate</h1>
       </div>
+      <div className={styles.controller}>
+        <Image src={'/icons/settings.png'} alt="teste" width={30} height={30} />
+        <p>Settings</p>
+      </div>
     </header>
   );
 }
