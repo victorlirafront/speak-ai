@@ -1,9 +1,12 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
+import { ANCORA_LOGO } from '../../../constants/IMAGES';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
-  standalone: true
+  standalone: true,
 })
-export class HeaderComponent  {}
+export class HeaderComponent {
+  logo = ANCORA_LOGO;
+}
