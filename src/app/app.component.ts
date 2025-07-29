@@ -7,6 +7,6 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [HeaderComponent, RouterModule],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'] // troque css por scss
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {}
