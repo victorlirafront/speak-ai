@@ -1,4 +1,13 @@
-<header>
-  <img src="assets/task-management-logo.png" alt="A todo list" />
-  <h1>Header</h1>
+<header class="header">
+  <div class="header-content">
+    <div class="logo-section">
+      <img src="assets/task-management-logo.png" alt="E-commerce Logo" />
+      <h1>E-commerce</h1>
+    </div>
+
+    <nav class="nav-menu">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">Home</a>
+      <a routerLink="/login" routerLinkActive="active" class="nav-link">Login</a>
+    </nav>
+  </div>
 </header>
