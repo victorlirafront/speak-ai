@@ -2,11 +2,6 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://ik.imagekit.io/Victorliradev/github/angular-logo_ma3uN7TuE.png?updatedAt=1752626403736" width="120" alt="Nest Logo" /></a>
 </p>
 
-<<<<<<< Updated upstream
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://ik.imagekit.io/Victorliradev/randoom/Captura%20de%20Tela%202025-08-13%20a%CC%80s%2011.05.55_DQqctQrNr.png?updatedAt=1755094043148"  alt="Nest Logo" /></a>
-</p>
-=======
 # E-commerce Microfrontends
 
 Este projeto implementa uma arquitetura de microfrontends para um e-commerce usando Angular 18.
@@ -22,8 +17,7 @@ ecommerce-frontend/
 │   ├── catalog/         # Microfrontend do catálogo de produtos
 │   ├── cart/           # Microfrontend do carrinho de compras
 │   ├── checkout/       # Microfrontend do processo de checkout
-│   ├── user/           # Microfrontend da área do usuário
-│   └── admin/          # Microfrontend do painel administrativo
+│   └── user/           # Microfrontend da área do usuário
 ├── angular.json         # Configuração do workspace Angular
 ├── package.json         # Dependências do projeto
 └── README.md           # Este arquivo
@@ -69,14 +63,6 @@ ecommerce-frontend/
   - Endereços salvos
   - Configurações
 
-### ⚙️ Admin
-- **Função**: Painel administrativo
-- **Responsabilidades**:
-  - Dashboard com métricas
-  - Gerenciamento de produtos
-  - Gestão de pedidos
-  - Relatórios
-
 ## Scripts Disponíveis
 
 ### Desenvolvimento
@@ -90,7 +76,6 @@ npm run start:catalog
 npm run start:cart
 npm run start:checkout
 npm run start:user
-npm run start:admin
 ```
 
 ### Build
@@ -104,7 +89,6 @@ npm run build:catalog
 npm run build:cart
 npm run build:checkout
 npm run build:user
-npm run build:admin
 
 # Build de todos os microfrontends
 npm run build:all
@@ -121,7 +105,6 @@ npm run test:catalog
 npm run test:cart
 npm run test:checkout
 npm run test:user
-npm run test:admin
 ```
 
 ## Como Executar
@@ -142,7 +125,6 @@ npm run test:admin
    - Cart: http://localhost:4202
    - Checkout: http://localhost:4203
    - User: http://localhost:4204
-   - Admin: http://localhost:4205
 
 ## Tecnologias Utilizadas
 
@@ -170,4 +152,3 @@ Este projeto implementa uma arquitetura de microfrontends onde:
 - [ ] Adicionar testes unitários e de integração
 - [ ] Configurar CI/CD para cada microfrontend
 - [ ] Implementar lazy loading dos microfrontends
->>>>>>> Stashed changes
