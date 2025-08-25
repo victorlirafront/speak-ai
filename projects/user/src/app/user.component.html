@@ -1,0 +1,66 @@
+<div class="user-container">
+  <h1>Minha Conta</h1>
+
+  <div class="user-content">
+    <div class="user-sidebar">
+      <nav class="user-nav">
+        <a href="#" class="nav-item active">Perfil</a>
+        <a href="#" class="nav-item">Pedidos</a>
+        <a href="#" class="nav-item">Endereços</a>
+        <a href="#" class="nav-item">Favoritos</a>
+        <a href="#" class="nav-item">Configurações</a>
+      </nav>
+    </div>
+
+    <div class="user-main">
+      <div class="profile-section">
+        <h2>Informações Pessoais</h2>
+        <form class="profile-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nome</label>
+              <input type="text" value="João Silva">
+            </div>
+            <div class="form-group">
+              <label>Sobrenome</label>
+              <input type="text" value="Santos">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" value="joao.silva@email.com">
+          </div>
+
+          <div class="form-group">
+            <label>Telefone</label>
+            <input type="tel" value="(11) 99999-9999">
+          </div>
+
+          <div class="form-group">
+            <label>Data de Nascimento</label>
+            <input type="date" value="1990-01-01">
+          </div>
+
+          <button type="submit" class="save-btn">Salvar Alterações</button>
+        </form>
+      </div>
+
+      <div class="recent-orders">
+        <h2>Pedidos Recentes</h2>
+        <div class="orders-list">
+          <div class="order-item" *ngFor="let order of recentOrders">
+            <div class="order-header">
+              <span class="order-number">#{{ order.number }}</span>
+              <span class="order-status" [class]="order.status">{{ order.statusText }}</span>
+            </div>
+            <div class="order-details">
+              <p>{{ order.date }}</p>
+              <p>Total: R$ {{ order.total }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
