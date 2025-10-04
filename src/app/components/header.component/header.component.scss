@@ -1,0 +1,130 @@
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin-bottom: 0;
+
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: 80px;
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      h1 {
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin: 0;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        letter-spacing: -0.5px;
+      }
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+
+      .nav-link {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        span {
+          font-size: 1.1rem;
+          transition: transform 0.3s ease;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+          transition: left 0.5s ease;
+        }
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+          span {
+            transform: scale(1.1);
+          }
+
+          &::before {
+            left: 100%;
+          }
+        }
+
+        &.active {
+          background: rgba(255, 255, 255, 0.2);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .header {
+    .header-content {
+      padding: 0 1rem;
+      flex-direction: column;
+      height: auto;
+      padding: 1rem;
+
+      .logo-section {
+        margin-bottom: 1rem;
+
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+
+      .nav-menu {
+        gap: 1rem;
+
+        .nav-link {
+          padding: 0.5rem 1rem;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

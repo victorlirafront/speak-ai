@@ -1,28 +1,12 @@
 {
-  "name": "ecommerce-microfrontends",
+  "name": "essentials",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve shell",
-    "start:shell": "ng serve shell",
-    "start:catalog": "ng serve catalog",
-    "start:cart": "ng serve cart",
-    "start:checkout": "ng serve checkout",
-    "start:user": "ng serve user",
-    "build": "ng build shell",
-    "build:shell": "ng build shell",
-    "build:catalog": "ng build catalog",
-    "build:cart": "ng build cart",
-    "build:checkout": "ng build checkout",
-    "build:user": "ng build user",
-    "build:all": "npm run build:shell && npm run build:catalog && npm run build:cart && npm run build:checkout && npm run build:user",
+    "start": "ng serve",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "test:shell": "ng test shell",
-    "test:catalog": "ng test catalog",
-    "test:cart": "ng test cart",
-    "test:checkout": "ng test checkout",
-    "test:user": "ng test user"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
