@@ -26,4 +26,9 @@ export class RegisterComponent {
     console.log('Register attempt:', this.registerData);
     // Aqui você implementaria a lógica de cadastro
   }
+
+  registerWithGoogle() {
+    console.log('Google register attempt');
+    // Aqui você implementaria a lógica de cadastro com Google
+  }
 }

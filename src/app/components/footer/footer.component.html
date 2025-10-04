@@ -1,0 +1,94 @@
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Main Footer Content -->
+    <div class="footer-main">
+      <!-- Company Info -->
+      <div class="footer-section">
+        <h3 class="footer-title">Speak AI</h3>
+        <p class="footer-description">
+          Plataforma de flashcards inteligentes para aprender inglês com IA.
+          Aprenda de forma natural, prática e envolvente com exemplos reais e áudios gerados por inteligência artificial.
+        </p>
+        <div class="social-links">
+          <a
+            *ngFor="let social of socialLinks"
+            [href]="social.url"
+            [title]="social.name"
+            class="social-link"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i [class]="social.icon"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h4 class="footer-subtitle">Links Rápidos</h4>
+        <ul class="footer-links">
+          <li *ngFor="let link of quickLinks">
+            <a [href]="link.url" class="footer-link">{{ link.name }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Learning Resources -->
+      <div class="footer-section">
+        <h4 class="footer-subtitle">Recursos de Aprendizado</h4>
+        <ul class="footer-links">
+          <li *ngFor="let resource of learningResources">
+            <a [href]="resource.url" class="footer-link">{{ resource.name }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Study Categories -->
+      <div class="footer-section">
+        <h4 class="footer-subtitle">Categorias de Estudo</h4>
+        <ul class="footer-links">
+          <li *ngFor="let category of studyCategories">
+            <a [href]="category.url" class="footer-link">{{ category.name }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-section">
+        <h4 class="footer-subtitle">Newsletter</h4>
+        <p class="newsletter-text">
+          Inscreva-se para receber dicas de inglês e novidades sobre o Speak AI!
+        </p>
+        <form class="newsletter-form">
+          <div class="newsletter-input-group">
+            <input
+              type="email"
+              placeholder="Seu e-mail"
+              class="newsletter-input"
+              required>
+            <button type="submit" class="newsletter-button">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <p class="copyright">
+          © {{ currentYear }} Speak AI. Todos os direitos reservados.
+        </p>
+        <div class="payment-methods">
+          <span class="payment-text">Aprenda com:</span>
+          <div class="payment-icons">
+            <i class="fas fa-brain" title="Inteligência Artificial"></i>
+            <i class="fas fa-volume-up" title="Áudio Gerado por IA"></i>
+            <i class="fas fa-graduation-cap" title="Repetição Espaçada"></i>
+            <i class="fas fa-lightbulb" title="Exemplos Contextuais"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

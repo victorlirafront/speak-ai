@@ -1,6 +1,21 @@
 <div class="login-container">
   <div class="login-card">
-    <h2>Login</h2>
+    <div class="login-header">
+      <h2>Bem-vindo de volta!</h2>
+      <p>Continue sua jornada de aprendizado em inglês</p>
+    </div>
+
+    <!-- Google Login -->
+    <button class="btn-google" (click)="loginWithGoogle()">
+      <i class="fab fa-google"></i>
+      Entrar com Google
+    </button>
+
+    <div class="divider">
+      <span>ou</span>
+    </div>
+
+    <!-- Email/Password Login -->
     <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
       <div class="form-group">
         <label for="email">Email:</label>
@@ -26,11 +41,14 @@
         >
       </div>
 
-      <button type="submit" class="btn-login">Entrar</button>
+      <button type="submit" class="btn-login" [disabled]="!loginForm.form.valid">
+        Entrar
+      </button>
     </form>
 
-    <div class="register-link">
+    <div class="login-footer">
       <p>Não tem uma conta? <a routerLink="/register">Cadastre-se</a></p>
+      <a href="#" class="forgot-password">Esqueceu sua senha?</a>
     </div>
   </div>
 </div>
