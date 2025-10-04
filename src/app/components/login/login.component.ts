@@ -20,4 +20,9 @@ export class LoginComponent {
     console.log('Login attempt:', this.loginData);
     // Aqui você implementaria a lógica de autenticação
   }
+
+  loginWithGoogle() {
+    console.log('Google login attempt');
+    // Aqui você implementaria a lógica de autenticação com Google
+  }
 }

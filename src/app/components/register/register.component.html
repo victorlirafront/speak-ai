@@ -1,6 +1,21 @@
 <div class="register-container">
   <div class="register-card">
-    <h2>Cadastro</h2>
+    <div class="register-header">
+      <h2>Comece sua jornada!</h2>
+      <p>Crie sua conta e comece a aprender inglês com IA</p>
+    </div>
+
+    <!-- Google Register -->
+    <button class="btn-google" (click)="registerWithGoogle()">
+      <i class="fab fa-google"></i>
+      Cadastrar com Google
+    </button>
+
+    <div class="divider">
+      <span>ou</span>
+    </div>
+
+    <!-- Email/Password Register -->
     <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
       <div class="form-group">
         <label for="name">Nome:</label>
@@ -34,7 +49,8 @@
           name="password"
           [(ngModel)]="registerData.password"
           required
-          placeholder="Digite sua senha"
+          minlength="6"
+          placeholder="Digite sua senha (mín. 6 caracteres)"
         >
       </div>
 
@@ -50,10 +66,20 @@
         >
       </div>
 
-      <button type="submit" class="btn-register">Cadastrar</button>
+      <div class="terms-checkbox">
+        <input type="checkbox" id="terms" required>
+        <label for="terms">
+          Aceito os <a href="/terms" target="_blank">Termos de Uso</a> e
+          <a href="/privacy" target="_blank">Política de Privacidade</a>
+        </label>
+      </div>
+
+      <button type="submit" class="btn-register" [disabled]="!registerForm.form.valid">
+        Criar Conta
+      </button>
     </form>
 
-    <div class="login-link">
+    <div class="register-footer">
       <p>Já tem uma conta? <a routerLink="/login">Faça login</a></p>
     </div>
   </div>
