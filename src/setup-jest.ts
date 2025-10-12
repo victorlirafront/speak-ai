@@ -2,10 +2,8 @@
 import { setupZoneTestEnv } from 'jest-preset-angular/setup-env/zone';
 setupZoneTestEnv();
 
-// Extensões do Testing Library
 import '@testing-library/jest-dom';
 
-// Mock do localStorage
 Object.defineProperty(window, 'localStorage', {
   value: {
     getItem: jest.fn(),
