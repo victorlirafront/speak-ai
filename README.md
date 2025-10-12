@@ -62,6 +62,21 @@ yarn build
 - 🚧 Sistema de repetição espaçada (em desenvolvimento)
 
 
+## 🔄 CI/CD
+
+O projeto utiliza GitHub Actions para integração e deploy contínuos:
+
+- **CI Pipeline**: Roda em PRs e pushs para `main` e `development`
+  - Instala dependências
+  - Executa linter
+  - Build da aplicação
+  - Roda testes unitários
+  - Upload de cobertura de testes
+
+- **Deploy Pipeline**: Roda apenas em pushs para `main`
+  - Build de produção
+  - Deploy automático
+
 ## 📝 Licença
 
 Todos os direitos reservados - Speak AI © 2025
