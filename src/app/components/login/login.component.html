@@ -1,20 +1,5 @@
 <div class="login-container">
   <div class="login-card">
-    <div class="login-header">
-      <h2>Bem-vindo de volta!</h2>
-      <p>Continue sua jornada de aprendizado em inglês</p>
-    </div>
-
-    <!-- Google Login -->
-    <button class="btn-google" (click)="loginWithGoogle()">
-      <i class="fab fa-google"></i>
-      Entrar com Google
-    </button>
-
-    <div class="divider">
-      <span>ou</span>
-    </div>
-
     <!-- Email/Password Login -->
     <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
       <div class="form-group">

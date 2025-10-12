@@ -1,20 +1,5 @@
 <div class="register-container">
   <div class="register-card">
-    <div class="register-header">
-      <h2>Comece sua jornada!</h2>
-      <p>Crie sua conta e comece a aprender inglês com IA</p>
-    </div>
-
-    <!-- Google Register -->
-    <button class="btn-google" (click)="registerWithGoogle()">
-      <i class="fab fa-google"></i>
-      Cadastrar com Google
-    </button>
-
-    <div class="divider">
-      <span>ou</span>
-    </div>
-
     <!-- Email/Password Register -->
     <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
       <div class="form-group">
